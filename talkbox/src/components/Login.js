@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import firebase from '../firebase/firebase';
 import Talk from './Talk.png';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
             await firebase.auth().signInWithEmailAndPassword(email, password);
             alert('Login successful!');
+            navigate('/chat');
+            
         } catch (error) {
             console.error('Login Error:', error.message);
             alert('Login Error, Try again');

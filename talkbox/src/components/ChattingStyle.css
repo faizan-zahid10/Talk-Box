@@ -1,0 +1,31 @@
+/* Here will be some styling for our Chatting page */
+
+.chat-sidebar {
+    height: 100vh;
+    overflow-y: auto;
+    background-color: lightcoral;
+  }
+  
+  .chat-window {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 251, 170);
+  }
+  
+  .chat-message {
+    /* display: inline-block; */
+  max-width: fit-content;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .input-group {
+    position: sticky;
+    bottom: 0;
+  }
+  
+  .list-group-item-action:hover {
+    background-color: #f0f0f0;
+  }
+  
