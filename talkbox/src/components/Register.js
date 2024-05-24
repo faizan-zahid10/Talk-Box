@@ -15,7 +15,7 @@ function Register() {
         try {
             await firebase.auth().createUserWithEmailAndPassword(email, password);
             console.log('User registered successfully!');
-            navigate('/login');
+            navigate('/profile');
         } catch (error) {
             console.error('Registration Error:', error.message);
         }

@@ -33,6 +33,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
 import Chatting from './components/Chatting'
+import ProfileSetting from './components/ProfileSetting'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
@@ -42,6 +43,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<ProfileSetting />} />
           <Route path="/login" element={<Login />} />
           <Route path="/chat" element={<Chatting />} />
 
